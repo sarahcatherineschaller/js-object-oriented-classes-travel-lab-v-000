@@ -23,4 +23,13 @@ class Route {
     let northSouthBlocks = this.endingLocation.vertical - this.beginningLocation.vertical;
     return eastWestBlocks + northSouthBlocks;
   }
+
+  estimatedTime(peak) {
+    if(peak) {
+      return this.blocksTravelled() / 2
+    } else {
+      return this.blocksTravelled() / 3
+    }
+
+  }
 }
